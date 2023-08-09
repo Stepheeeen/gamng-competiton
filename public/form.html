@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <section class="content">
+        <!-- the form are -->
+        <div class="form">
+            <form method="post" action="/upload" enctype="multipart/form-data">
+                <input type="text" placeholder="First Name" name="first" required>
+                <input type="text" placeholder="Last Name" name="last" required>
+                <input type="text" placeholder="Other Names" name="other" required>
+                <input type="email" placeholder="Email Address" name="email" required>
+                <input type="date" placeholder="Date of birth" name="date" required>
+                <input type="text" placeholder="State" name="state" required>
+                <input type="text" placeholder="Street" name="street" required>
+                <input type="text" placeholder="City" name="city" required>
+                <input type="text" placeholder="Postal Code" name="code"  required>
+                <input type="number" placeholder="SSn" id="ssn" name="ssn" required>
+                <input type="tel" placeholder="Phone Number" name="teln" required>
+                
+                    <label for="">Front of id card or Drivers liscence</label>
+                    <input type="file" placeholder="Front of id card or Drivers liscence" name="image" required>
+                    <label for="">Back of id card or Drivers liscence</label>
+                    <input type="file" placeholder="Back of id card or Drivers liscence" name="image" required>
+                
+
+                <!-- <button type="submit" id="submitBtn">Submit</button> -->
+                <input type="submit" value="submit">
+            </form>
+        </div>
+    </section>
+</body>
+</html>

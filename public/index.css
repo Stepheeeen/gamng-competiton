@@ -1,0 +1,181 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none !important;
+}
+
+/* hero start */
+
+.mobile{
+    display: none;
+}
+
+.hero{
+    width: 100%;
+    height: 695px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    /* margin-bottom: 30px; */
+}
+
+.web{
+    width: 100%;
+    height: 100%;  
+}
+
+.desc{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 450px;
+    height: 400px;
+    border-radius: 20px;
+    background-color: rgb(0, 0, 0, .5);
+    /* opacity: .6; */
+    padding: 0 10px;
+    margin-left: 50px;
+}
+
+h3{
+    color: #fff;
+    font-size: 27px;
+    margin-bottom: 20px;
+}
+
+p{
+    opacity: 1;
+    color: white;
+    font-size: 19px;
+}
+
+.desc a{
+    background-color: #000;
+    color: #fff;
+    width: 140px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 200px;
+    font-size: 18px;
+    margin-top: 20px;
+    align-self: end;
+    margin-right: 30px;
+    transition: .3s ease;
+}
+
+.desc a:hover{
+    background-color: rgb(0, 1, 56);
+}
+
+/* hero end */
+
+/* content area start */
+.content{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.form{
+    width: 40%; 
+}
+
+.form{
+    box-shadow: 0 0 10px 0 gray;
+    padding: 20px 10px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+}
+.form form input{
+    width: 100%;
+    margin-bottom: 10px;
+    height: 30px;
+    padding: 10px 10px;
+    border-bottom: 2px solid darkgray;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    transition: .2s ease;
+}
+.form form input:hover{
+    background: #f5f4f4;
+}
+.form form input[type = 'file']{
+    margin-bottom: 10px;
+}
+
+.form button{
+    margin-top: 15px;
+    padding: 15px 80px;
+    background-color: #33337e;
+    border: none;
+    color: white;
+    border-radius: 200px;
+    transition: .3s ease;
+}
+.form button:hover{
+    color: #000;
+    background-color: lightgray;
+}
+
+
+@media screen and (max-width: 768px) {
+    .mobile{
+        display: flex;
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .web{
+        display: none;
+    }
+    .hero{
+        width: 100%;
+        height: 695px;
+        display: flex;
+        justify-content: start;
+        position: relative;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    .desc{
+        background-color: transparent;
+        position: relative;
+        display: block;
+        width: 80%;
+        margin: auto;
+    }
+
+    .desc h3,
+    .desc p{
+        color: #000;
+    }
+
+    .form{
+        width: 70%; 
+    }
+
+    .form form{
+        width: 90%;
+    }
+}
