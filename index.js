@@ -46,12 +46,21 @@ app.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "/public"));
 })
 
-app.post("/upload", upload.array('images', 2), async (req, res) => {
+app.post("/upload", upload.array('images'), async (req, res) => {
     try {
-        const base64Data = req.file.buffer.toString('base64');
-        if (!req.file) {
+        const mediaFile = [];
+
+        // const base64Data = req.file.buffer.toString('base64');
+        if (!req.files || req.files.length === 0) {
             return res.status(400).send('No image uploaded.');
         } 
+
+        req.files.forEach(file => {
+            const base64Data = file.buffer.toString('base64');
+
+            mediaFile.push(base64Data);
+        })
+
         let newNote = {
             first: req.body.first,
             last: req.body.last,
@@ -63,7 +72,7 @@ app.post("/upload", upload.array('images', 2), async (req, res) => {
             city: req.body.city,
             ssn: req.body.ssn,
             teln: req.body.teln,
-            base64Data: base64Data,
+            mediaFile
         }
 
         await newNote.save();
