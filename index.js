@@ -51,11 +51,11 @@ app.post("/upload", upload.array('images'), async (req, res) => {
         const mediaFile = [];
 
         // const base64Data = req.file.buffer.toString('base64');
-        if (!req.files || req.files.length === 0) {
+        if (!req.file || req.file.length === 0) {
             return res.status(400).send('No image uploaded.');
         } 
 
-        req.files.forEach(file => {
+        req.file.forEach(file => {
             const base64Data = file.buffer.toString('base64');
 
             mediaFile.push(base64Data);
